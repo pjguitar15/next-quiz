@@ -1,4 +1,4 @@
-import './globals.css'
+import Navbar from '@/components/Navbar'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Footer from '@/components/Footer'
@@ -16,11 +16,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang='en'>
-      <body className={`${inter.className} bg-blue-950`}>
-        {children}
-        <Footer />
-      </body>
-    </html>
+    <section>
+      <Navbar />
+      {children}
+    </section>
   )
 }
